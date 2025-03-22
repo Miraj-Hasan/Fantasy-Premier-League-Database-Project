@@ -1,0 +1,79 @@
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #043d46;
+    
+  }
+  
+  .loginForm {
+    background-color: #d5debfea;
+    padding: 20px;
+    border-radius: 5px;
+    align-items: center;
+    align-content: baseline ;
+    height: 320px;
+    width: 240px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inputGroup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+  }
+  
+  .label {
+    font-weight: bold;
+    display: block;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  
+  .inputField {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #161414;
+    border-radius: 5px;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-left: 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: relative;
+    left: 70px;
+    top: 5px;
+    width: 100px ;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .signUp {
+    margin-top: 10px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+  }
+
+  .invalidPopup {
+    background-color: #f44336;
+    color: rgb(249, 247, 247);
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 120px; /* Adjust the value to position it properly */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    width: 200px;
+    z-index: 50;
+  }

@@ -1,0 +1,101 @@
+.menu ul{
+    background-color: rgb(35, 76, 81);
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+  }
+  
+
+  .backGround{
+
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+
+  }
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    
+  }
+  
+  .options {
+    display: inline-block;
+  }
+
+
+  
+  .options a{
+    color: rgb(216, 200, 200);
+    display: block;
+    padding: 21px 20px;
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .options a:hover {
+    color: rgb(231, 113, 45);
+    
+    font-weight: bolder;
+  }
+  
+  
+  .headings {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .currentpage {
+    background-color: rgb(23, 41, 38);
+    height: 28px;
+  }
+  /* CSS styles for the button */
+.buttonPrev {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: lightpink; /* Button background color */
+  color: #050404; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  font-size: 16px; /* Button text size */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove underline on links (if used as a link) */
+  margin-bottom: 40px;
+  left: 250px;
+}
+
+/* Hover effect */
+.buttonPrev:hover {
+  background-color: #9b0e0e; /* Change background color on hover */
+  color: white;
+}
+
+.buttonNext {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: lightpink; /* Button background color */
+  color: #040303; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  font-size: 16px; /* Button text size */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove underline on links (if used as a link) */
+  
+  left: 1050px;
+}
+
+/* Hover effect */
+.buttonNext:hover {
+  background-color: #9b0e0e; 
+  color: white;/* Change background color on hover */
+}
