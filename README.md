@@ -37,10 +37,3 @@ Fantasy Premier League (FPL) - Advanced Edition is a web-based platform inspired
 | **Database** | Oracle         |
 | **Frontend** | Next.js, React, CSS |
 | **Backend**  | Node.js        |
-
-## 🚀 Getting Started
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/your-username/fpl-advanced.git
-cd fpl-advanced
-
