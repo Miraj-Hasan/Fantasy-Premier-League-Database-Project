@@ -1,0 +1,77 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : FPL_PROJECT
+ Source Server Type    : Oracle
+ Source Server Version : 190000 (Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production)
+ Source Host           : 0.0.0.0:1521
+ Source Schema         : FPL_PROJECT
+
+ Target Server Type    : Oracle
+ Target Server Version : 190000 (Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production)
+ File Encoding         : 65001
+
+ Date: 17/08/2023 02:01:09
+*/
+
+
+-- ----------------------------
+-- Table structure for Team
+-- ----------------------------
+DROP TABLE "FPL_PROJECT"."Team";
+CREATE TABLE "FPL_PROJECT"."Team" (
+  "TeamName" VARCHAR2(20 BYTE) VISIBLE NOT NULL,
+  "CurrentGWPoint" NUMBER(3,0) VISIBLE NOT NULL,
+  "TeamValue" NUMBER(4,1) VISIBLE DEFAULT 100.0 NOT NULL,
+  "TeamBalance" NUMBER(4,1) VISIBLE DEFAULT 100.0 NOT NULL,
+  "TotalPoints" NUMBER(4,0) VISIBLE DEFAULT 0 NOT NULL,
+  "TeamId" NUMBER VISIBLE DEFAULT "FPL_PROJECT"."TEAMIDNUMBER".nextval NOT NULL,
+  "TransferAvailable" NUMBER VISIBLE DEFAULT 1 NOT NULL,
+  "OwnerId" NUMBER VISIBLE NOT NULL
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of Team
+-- ----------------------------
+INSERT INTO "FPL_PROJECT"."Team" VALUES ('Team_abcd', '0', '100', '0', '0', '4', '1', '4');
+INSERT INTO "FPL_PROJECT"."Team" VALUES ('Team_ultra', '0', '100', '0', '0', '1', '1', '1');
+INSERT INTO "FPL_PROJECT"."Team" VALUES ('Team_salah', '0', '100', '0', '0', '2', '1', '2');
+INSERT INTO "FPL_PROJECT"."Team" VALUES ('Team_haaland', '0', '100', '0', '0', '3', '1', '3');
+
+-- ----------------------------
+-- Primary Key structure for table Team
+-- ----------------------------
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007814" PRIMARY KEY ("TeamId");
+
+-- ----------------------------
+-- Checks structure for table Team
+-- ----------------------------
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007805" CHECK ("TeamName" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007806" CHECK ("CurrentGWPoint" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007807" CHECK ("TeamValue" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007808" CHECK ("TeamBalance" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007809" CHECK ("TotalPoints" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007810" CHECK ("TeamId" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007811" CHECK ("TransferAvailable" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "SYS_C007812" CHECK ("OwnerId" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "team_balance_non_negative" CHECK ("TeamBalance" >= 0) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+
+-- ----------------------------
+-- Foreign Keys structure for table Team
+-- ----------------------------
+ALTER TABLE "FPL_PROJECT"."Team" ADD CONSTRAINT "team_has_owner" FOREIGN KEY ("OwnerId") REFERENCES "FPL_PROJECT"."User" ("UserId") ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
