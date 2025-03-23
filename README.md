@@ -1,7 +1,7 @@
 # Fantasy Premier League - Advanced Edition
 
 ## 📌 Overview
-Fantasy Premier League (FPL) - Advanced Edition is a web-based platform inspired by the official Fantasy Premier League website. This project extends the classic FPL experience by introducing additional analytical insights and enhanced player tracking features, providing managers with a deeper understanding of their squad's performance.
+Fantasy Premier League (FPL) - Database Project is a database-based project inspired by the official Fantasy Premier League website. This project extends the classic FPL experience by introducing additional analytical insights and enhanced player tracking features, providing managers with a deeper understanding of their squad's performance.
 
 ## 🔥 Key Features
 ### **1. Enhanced Player Statistics**
