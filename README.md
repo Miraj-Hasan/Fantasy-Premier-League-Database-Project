@@ -3,8 +3,8 @@
 ## 📌 Overview
 Fantasy Premier League (FPL) - Database Project is a database-based project inspired by the official Fantasy Premier League website. This project extends the classic FPL experience by introducing additional analytical insights and enhanced player tracking features, providing managers with a deeper understanding of their squad's performance.
 
-If you're new to FPL, you can watch this short overview on how to play:  
-🔗 [Watch on YouTube](https://youtu.be/mAvr7qz7O1o?si=FC5_KFzMQtWLB8ZW)
+If you're new to FPL, you can watch this short overview on how to play FPL:  
+🔗 [FPL beginners guide ](https://youtu.be/mAvr7qz7O1o?si=FC5_KFzMQtWLB8ZW)
 
 ## 🔥 Key Features
 ### **1. Enhanced Player Statistics**
